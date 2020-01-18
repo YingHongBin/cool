@@ -1,0 +1,66 @@
+---
+charset: "UTF-8"
+fields:
+- name: "sessionId"
+  fieldType: "AppKey"
+  dataType: "String"
+  preCal: false
+- name: "playerId"
+  fieldType: "UserKey"
+  dataType: "String"
+  preCal: false
+- name: "role"
+  fieldType: "Segment"
+  dataType: "String"
+  preCal: false
+- name: "money"
+  fieldType: "Metric"
+  dataType: "Int32"
+  preCal: false
+- name: "event"
+  fieldType: "Action"
+  dataType: "String"
+  preCal: false
+- name: "eventDay"
+  fieldType: "ActionTime"
+  dataType: "Int32"
+  preCal: false
+- name: "platform"
+  fieldType: "Segment"
+  dataType: "String"
+  preCal: false
+- name: "country"
+  fieldType: "Segment"
+  dataType: "String"
+  preCal: false
+- name: "continent"
+  fieldType: "Segment"
+  dataType: "String"
+  preCal: false
+- name: "city"
+  fieldType: "Segment"
+  dataType: "String"
+  preCal: false
+- name: "numSession"
+  fieldType: "Metric"
+  dataType: "Int32"
+  preCal: false
+- name: "sessionLength"
+  fieldType: "Metric"
+  dataType: "Int32"
+  preCal: false
+# - name: "activity_counter"
+#   fieldType: "Metric"
+#   dataType: "Aggregate"
+#   baseField: "event"
+#   aggregator: "COUNT"
+# - name: "activeness"
+#   fieldType: "Metric"
+#   dataType: "Aggregate"
+#   baseField: "event" 
+#   aggregator: "COUNT"
+# - name: "minTime"
+#   fieldType: "Metric"
+#   dataType: "Aggregate"
+#   baseField: "eventDay" 
+#   aggregator: "MIN"
