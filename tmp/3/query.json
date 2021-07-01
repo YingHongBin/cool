@@ -1,0 +1,10 @@
+{
+    "dataSource" : "tpc-h-10g",
+    "selection" : null,
+    "groupFields" : ["R_NAME"],
+    "aggregations" : [
+        {"fieldName" : "O_TOTALPRICE", "operators" : ["SUM"]}
+    ],
+    "timeRange" : null,
+    "granularity" : "MONTH"
+}

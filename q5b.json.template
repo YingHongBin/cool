@@ -1,0 +1,18 @@
+{
+    "dataSource" : "indata",
+    "selection" : {
+        "type" : "and",
+        "dimension" : null,
+        "values" : null,
+        "fields" : [
+            { "type" : "filter", "dimension" : "CASETYPE", "values" : ["INPATIENT"], "fields" : null },
+            { "type" : "filter", "dimension" : "EVENT", "values" : ["discharge"], "fields" : null}
+        ]
+    },
+    "groupFields" : ["Region"],
+    "aggregations" : [
+        {"fieldName" : "METRIC", "operators" : ["COUNT"]}
+    ],
+    "timeRange" : null,
+    "granularity" : null
+}

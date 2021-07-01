@@ -1,0 +1,14 @@
+{
+    "dataSource": "indata",
+    "appKey": "aaa",
+    "ageInterval": 1,
+    "metric": "Retention",
+    "cohortFields": ["INSTITUTION"],
+    "birthSelection":[
+        {"filterType":"Set", "cubeField":"INSTITUTION", "values": ["NUS", "NHGP"]}
+    ],
+    "birthActions": ["observation start", "operating"],
+    "ageSelection": [
+        {"filterType": "Set", "cubeField": "EVENT", "values": ["effective"]}
+    ]
+}

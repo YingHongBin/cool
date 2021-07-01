@@ -1,0 +1,38 @@
+1. Build 
+
+Simply run mvn package.
+
+2. Perform cohort queries using COHANA.
+
+2.1 Required documents:
+    1 dataset: a csv file with "," delimiter (normally dumped from a database
+        table)
+    2 dimension file: a csv file "," delimiter. Each line of this file has two
+        fields: the first field is the name of a column in the dataset, and the
+        second field is a value of this column. Each distinct value of each
+        column in the dataset shall appear in this dimension file once.
+    3 table.yaml: a json file describing the schema of the dataset
+    4 cube.yaml: a json file specifying the dimension and measure fileds
+    5 runtime configure file: a yaml file specify the parameters for running query
+        server. Currently, it is only required to specify the location of
+        runtime directory (detailed in Step 2).
+
+    We have provide an example for each of the three yaml documents in config
+    directory. 
+
+2.2 Compact the dataset
+
+COHANA evaluates cohort queries over a customized storage format. We have
+developed a loader to convert the plain dataset in csv format into the desired
+format. To convert, one can run the cohana-loader.jar with the following 
+five arguments:
+    1 the table.yaml (the third required document)
+    2 the dimension file (the second required document)
+    3 the dataset file (the first required document)
+    4 the output directory for the compacted dataset
+    5 chunk size
+For example, one can convert the dataset with the following command:
+    java -jar cohana-loader.jar "/path/to/table.yaml" "/path/to/dimension.csv"
+    "/path/to/dataset.csv" "/path/to/output/directory" 65536
+
+
